@@ -52,7 +52,7 @@ git push -u origin master
 
    * clone
    git clone git@server-name:path/repo-name.git                
-   还可以用https://github.com/michaelliao/gitskills.git                    
+   还可以用https://github.com/path/repo-name.git                    
    Git支持多种协议 默认的git://使用ssh 但也可以使用https等其他协议。
 
 
@@ -101,6 +101,6 @@ git push origin --tags 一次性推送所有标签到远程
 
 
  
-error: failed to push some refs to 'git@github.com:diturbed/learngit.git'                                 
+error: failed to push some refs to 'git@github.com:path/repo-name.git'                                 
 需要将github远程repo pull到本地合并重新提交                                       
 git pull --rebase origin master                          
