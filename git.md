@@ -69,38 +69,38 @@ conflict:改动分支dev后commit 再改动master后commit merge就会出现conf
 --no-ff参数普通模式合并 能看出来曾经做过合并 fast forward看不出来曾经做过合并                 
 
 ### BUG分支
-修复bug:通过创建bug分支进行修复--->合并--->删除bug分支         
-git stash 保存当前工作现场          
-git stash list 查看保存的工作现场         
-git stash pop 回复工作现场        
-git cherry-pick commit_id                
-在master分支issue01上修复bug dev分支只需要使用git cherry-pick commit_id就可以将issue01中修复的bug复制到当前dev分支
+修复bug:通过创建bug分支进行修复--->合并--->删除bug分支             
+git stash 保存当前工作现场                   
+git stash list 查看保存的工作现场                  
+git stash pop 回复工作现场             
+git cherry-pick commit_id                        
+在master分支issue01上修复bug dev分支只需要使用git cherry-pick commit_id就可以将issue01中修复的bug复制到当前dev分支         
 
 ### 远程分支管理
-* 推送修改 git push origin <branch-name>
-* 推送失败 git pull 合并   
-git remote -v 查看远程库信息                    
-git checkout -b branch-name origin/branch-name 在本地创建和远程分支对应的分支          
-git branch --set-upstream branch-name origin/branch-name 建立本地分支和远程分支的关联           
-git pull 从远程抓取分支 如果有冲突 要先处理冲突    
-git rebase 把本地未push的分叉提交历史整理成直线   
-* 合并冲突 解决冲突 本地提交
-* git push origin <branch-name>
+* 推送修改 git push origin <branch-name>              
+* 推送失败 git pull 合并                
+git remote -v 查看远程库信息                                  
+git checkout -b branch-name origin/branch-name 在本地创建和远程分支对应的分支                         
+git branch --set-upstream branch-name origin/branch-name 建立本地分支和远程分支的关联                     
+git pull 从远程抓取分支 如果有冲突 要先处理冲突                      
+git rebase 把本地未push的分叉提交历史整理成直线                   
+* 合并冲突 解决冲突 本地提交                      
+* git push origin <branch-name>           
 
 
 ## 标签
-git tag <tagname> 新建一个标签
-git tag -a <tagname> -m "blablabla..." 指定标签信息
-git tag 查看所有标签
-git tag <tagname> commit_id 给历史提交的commit_id打标签
-git tag -d <tagname> 删除标签
-git push origin <tagname> 标签推送到远程
-git push origin --tags 一次性推送所有标签到远程
-删除远程标签:git tag -d <tagname>先删除本地 git push origin :refs/tags/<tagname>再删除远程
+git tag <tagname> 新建一个标签            
+git tag -a <tagname> -m "blablabla..." 指定标签信息            
+git tag 查看所有标签          
+git tag <tagname> commit_id 给历史提交的commit_id打标签           
+git tag -d <tagname> 删除标签          
+git push origin <tagname> 标签推送到远程           
+git push origin --tags 一次性推送所有标签到远程                      
+删除远程标签:git tag -d <tagname>先删除本地 git push origin :refs/tags/<tagname>再删除远程               
 
 
 
  
-error: failed to push some refs to 'git@github.com:diturbed/learngit.git'           
-需要将github远程repo pull到本地合并重新提交                 
-git pull --rebase origin master 
+error: failed to push some refs to 'git@github.com:diturbed/learngit.git'                                 
+需要将github远程repo pull到本地合并重新提交                                       
+git pull --rebase origin master                          
