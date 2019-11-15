@@ -33,7 +33,7 @@ git diff HEAD -- filename 查看历史版本与当前版本区别
 git reset --hard HEAD~10    HEAD指向的版本就是当前版本      
 git reset --hard commit_id
 git reflog  查看命令历史 以便确定要回到未来的哪个版本                  
-git log --graph --pretty=oneline --abbrev-commit  查看提交历史 分支合并情况等
+git log --graph --pretty=oneline --abbrev-commit  查看提交历史 分支合并情况等          
 git checkout -- filename 工作区的修改全部撤销                       
 git reset HEAD filename 缓存区的修改全部撤销                        
 git rm 删除文件
